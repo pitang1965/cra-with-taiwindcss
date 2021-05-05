@@ -20,9 +20,6 @@ module.exports = {
           '100%': { transform: 'rotate(360deg)' },
         },
       },
-      height: {
-        "40v": "40vh",
-      }
     },
   },
   variants: {
