@@ -8,24 +8,26 @@ function App() {
 
   return (
     <>
-    <Switch.Group>
-      <div className="flex items-center">
-        <Switch.Label passive className="m-2">Tailwind CSSを使用する</Switch.Label>
-        <Switch
-          checked={useTailwind}
-          onChange={setUseTaiwind}
-          className={`${
-            useTailwind ? "bg-green-500" : "bg-gray-500"
-          } relative inline-flex items-center h-6 rounded-full w-11 transition-colors focus:outline-none m-2`}
-        >
-          <span
+      <Switch.Group>
+        <div className='flex items-center'>
+          <Switch.Label passive className='m-2'>
+            Tailwind CSSを使用する
+          </Switch.Label>
+          <Switch
+            checked={useTailwind}
+            onChange={setUseTaiwind}
             className={`${
-              useTailwind ? "translate-x-6" : "translate-x-1"
-            } inline-block w-4 h-4 transform bg-white rounded-full transition-transform`}
-          />
-        </Switch>
-      </div>
-    </Switch.Group>
+              useTailwind ? 'bg-green-500' : 'bg-gray-500'
+            } relative inline-flex items-center h-6 rounded-full w-11 transition-colors focus:outline-none m-2`}
+          >
+            <span
+              className={`${
+                useTailwind ? 'translate-x-6' : 'translate-x-1'
+              } inline-block w-4 h-4 transform bg-white rounded-full transition-transform`}
+            />
+          </Switch>
+        </div>
+      </Switch.Group>
 
       {useTailwind ? (
         // Tailswind CSS (index.css 及び tailwind.config.js)を使用
@@ -47,6 +49,17 @@ function App() {
             >
               Tailwind CSSを使用しています
             </a>
+            <p>
+              ソースコードは
+              <a
+                className='text-reactBlue'
+                href='https://github.com/pitang1965/cra-with-taiwindcss'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                こちら
+              </a>
+            </p>
           </header>
         </div>
       ) : (
@@ -65,6 +78,17 @@ function App() {
             >
               Tailwind CSSを使用していません
             </a>
+            <p>
+              ソースコードは
+              <a
+                className='text-reactBlue'
+                href='https://github.com/pitang1965/cra-with-taiwindcss'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                こちら
+              </a>
+            </p>
           </header>
         </div>
       )}
