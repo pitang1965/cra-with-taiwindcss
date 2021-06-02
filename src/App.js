@@ -32,10 +32,10 @@ function App() {
       {useTailwind ? (
         // Tailswind CSS (index.css 及び tailwind.config.js)を使用
         <div className='text-center'>
-          <header className='header-font-size bg-cra min-h-screen flex flex-col items-center justify-center text-white'>
+          <header className='flex flex-col items-center justify-center min-h-screen text-white header-font-size bg-cra'>
             <img
               src={logo}
-              className='logo-height animate-spinSlow pointer-events-none'
+              className='pointer-events-none logo-height animate-spinSlow'
               alt='logo'
             />
             <p>
